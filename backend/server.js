@@ -9,8 +9,6 @@ import { generateResult } from './services/ai.service.js';
 
 const port = process.env.PORT || 3000;
 
-
-
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
@@ -88,9 +86,7 @@ io.on('connection', socket => {
                     email: 'AI'
                 }
             })
-
-
-            return
+            return;
         }
 
 
